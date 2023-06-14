@@ -7,14 +7,14 @@ router.get("/", (req, res) => {
 
 router.post("/contactme", async (req, res) => {
   const contactDetails = await new contactmodel({
-    // name:req.body.name,
-    // email:req.body.email,
-    // messages:req.body.messages
+    name: req.body.name,
+    email: req.body.email,
+    messages: req.body.messages,
 
-    name: "Amadi",
-    email: "amadimarcelino",
-    messages: "work needded",
-    project: "web app",
+    // name: "Amadi",
+    // email: "amadimarcelino",
+    // messages: "work needded",
+    // project: "web app",
   }).save();
   if (contactDetails) {
     res.status(200).json({
