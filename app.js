@@ -1,12 +1,16 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+
 const contactMe = require("./models/ContactmeModel");
 const router = require("./routers/contactmeRouter");
 const cors = require("cors");
 app.use(express.json());
 app.use(cors());
-const PORT = 5000;
+dotenv.config({ path: "./config.env" });
+const port = process.env.PORT || 5000;
+// const PORT = 5000;
 app.use("/api/v1/portfolio", router);
 //middlewares
 app.use("/", (req, res) => {
@@ -23,7 +27,7 @@ mongoose
   })
   .then((result) => {
     console.log("Database connection successfull");
-    app.listen(PORT);
+    app.listen(port);
   })
   .catch((err) => console.log(err));
 
