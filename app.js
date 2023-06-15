@@ -8,6 +8,8 @@ const router = require("./routers/contactmeRouter");
 const cors = require("cors");
 app.use(express.json());
 app.use(cors());
+var bodyParser = require("body-parser");
+app.use(bodyParser.json());
 dotenv.config({ path: "./config.env" });
 const port = process.env.PORT || 5000;
 // const PORT = 5000;

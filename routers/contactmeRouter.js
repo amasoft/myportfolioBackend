@@ -10,6 +10,7 @@ router.post("/contactme", async (req, res) => {
     name: req.body.name,
     email: req.body.email,
     messages: req.body.messages,
+    project: req.body.project,
 
     // name: "Amadi",
     // email: "amadimarcelino",
