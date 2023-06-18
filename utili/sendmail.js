@@ -22,7 +22,7 @@ const sendmail = (name, projectType, projectDesc, email) => {
       `<p>Contact email :${email}</p>`,
   };
 
-  transporter.sendMail(mailOptions, function (error, info) {
+  const sendMail = transporter.sendMail(mailOptions, function (error, info) {
     if (error) {
       console.log(error);
     } else {
@@ -30,5 +30,4 @@ const sendmail = (name, projectType, projectDesc, email) => {
     }
   });
 };
-
 module.exports = sendmail;
