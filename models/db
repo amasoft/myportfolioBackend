@@ -1,0 +1,40 @@
+USE [customer_receipt]
+GO
+
+/****** Object:  Table [dbo].[Customers_Receipts]    Script Date: 28/10/2023 19:54:27 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Customers_Receipts](
+	[id] [int] IDENTITY(1,1) NOT NULL,
+	[branchCode] [nvarchar](255) NULL,
+	[branchName] [nvarchar](255) NULL,
+	[transactionId] [nvarchar](255) NULL,
+	[transactionDate] [date] NULL,
+	[accountNumber] [nvarchar](255) NULL,
+	[accountName] [nvarchar](255) NULL,
+	[transactionDescription] [nvarchar](255) NULL,
+	[amountInWords] [nvarchar](255) NULL,
+	[amount] [float] not null,
+	[tellerId] [nvarchar](255) NULL,
+	[Currency] [nvarchar](255) NULL,
+	[depositor] [nvarchar](255) NULL,
+	[dateAdded] [nvarchar](255) NULL,
+	[status] [nvarchar](255) NULL,
+	[benefactor] [nvarchar](255) NULL,
+	[chequeNumber] [nvarchar](255) NULL,
+	[mcNumber] [nvarchar](255) NULL,
+	[created_at] [datetime2](7) NOT NULL DEFAULT (sysdatetime()),
+	[transactiontype] [nvarchar](255) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+

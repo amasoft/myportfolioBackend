@@ -1,21 +1,21 @@
 const { Schema, model, mongoose } = require("mongoose");
 const { required } = require("nodemon/lib/config");
 const ContactmeSchema = new mongoose.Schema({
-  name: {
+  fullName: {
     type: String,
-    required: [true, "please provide your name"],
+    required: [true, "please provide your fullname"],
   },
   email: {
     type: String,
     required: [true, "please provide your Valid Email"],
   },
-  messages: {
+  subject: {
     type: String,
-    required: [true, "please add messages for us"],
+    required: [true, "please Email subject"],
   },
-  project: {
+  message: {
     type: String,
-    required: [true, "please select the project type"],
+    required: [true, "please provide message"],
   },
 });
 

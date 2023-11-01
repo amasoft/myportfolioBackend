@@ -1,5 +1,5 @@
 var nodemailer = require("nodemailer");
-const sendmail = (name, projectType, projectDesc, email) => {
+const hireMemail = (name, projectType, projectDesc, email) => {
   var transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -10,8 +10,8 @@ const sendmail = (name, projectType, projectDesc, email) => {
 
   var mailOptions = {
     from: "amadifaraday@gmail.com",
-    to: "amadiarinzechukwu@gmail.com",
-    subject: "PortfolioC(Hire Me):Backend Service",
+    to: `${email}`,
+    subject: "Portfolio (Hire Me):Backend Service",
     text: "you have a new request for backend task ",
     html:
       "<h4>welcome </h4>" +
@@ -30,4 +30,4 @@ const sendmail = (name, projectType, projectDesc, email) => {
     }
   });
 };
-module.exports = sendmail;
+module.exports = hireMemail;
