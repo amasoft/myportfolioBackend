@@ -10,7 +10,7 @@ const hireMemail = (name, projectType, projectDesc, email) => {
 
   var mailOptions = {
     from: "amadifaraday@gmail.com",
-    to: `${email}`,
+    to: `amadiarinzechukwu@gmail.com`,
     subject: "Portfolio (Hire Me):Backend Service",
     text: "you have a new request for backend task ",
     html:

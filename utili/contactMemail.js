@@ -11,7 +11,7 @@ const contactMemail = (name, subject, messages, email) => {
   var mailOptions = {
     from: "amadifaraday@gmail.com",
     to: "amadiarinzechukwu@gmail.com",
-    subject: `${subject}`,
+    subject: `CONTACT ME: ${subject}`,
     // text: "you have a new request for backend task ",
     html:
       "<h4>welcome </h4>" +

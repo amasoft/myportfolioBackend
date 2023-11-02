@@ -19,4 +19,4 @@ const hireMeSchema = new mongoose.Schema({
   },
 });
 
-module.exports = model("contactme", hireMeSchema);
+module.exports = model("hireme", hireMeSchema);
