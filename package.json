@@ -18,5 +18,8 @@
     "mongoose": "^6.3.4",
     "nodemailer": "^6.9.7",
     "nodemon": "^2.0.16"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }

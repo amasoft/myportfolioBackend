@@ -19,8 +19,7 @@ app.use("/", (req, res) => {
   console.log("welcome to amapat Api");
 });
 // app.use(express.json())
-const CONNECTIONURL =
-  "mongodb+srv://patrick:kgEuOVhqzeaD91Tt@cluster0.bjerbjj.mongodb.net/portfolio";
+const CONNECTIONURL = process.env.URL;
 mongoose
   .connect(CONNECTIONURL, {
     useNewUrlParser: true,
@@ -29,8 +28,9 @@ mongoose
   })
   .then((result) => {
     console.log("Database connection successfull");
-    app.listen(port);
+    // app.listen(port);
   })
   .catch((err) => console.log(err));
 
 app.use(router);
+export default app;
